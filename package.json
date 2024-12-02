@@ -1,11 +1,11 @@
 {
   "name": "storybook-addon-storybooktoprefab",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "It will create the prefab zip to download and use in wavemaker",
   "keywords": [
-    "storybook-addons", "storybook-addons"
+    "storybook-addons",
+    "storybook-addons"
   ],
-  
   "repository": {
     "type": "git",
     "url": "https://github.com/hmonika23/storybooktoprefab"
@@ -24,12 +24,10 @@
       "import": "./dist/preview.js",
       "require": "./dist/preview.cjs"
     },
-     
     "./preset": "./dist/preset.cjs",
     "./manager": "./dist/manager.js",
     "./package.json": "./package.json"
   },
-
   "main": "addon/index.cjs",
   "files": [
     "dist/**/*",
@@ -103,7 +101,15 @@
   "storybook": {
     "displayName": "stroybooktoprefab",
     "supportedFrameworks": [
-      "react", "vue", "angular", "web-components", "ember", "html", "svelte", "preact", "react-native"
+      "react",
+      "vue",
+      "angular",
+      "web-components",
+      "ember",
+      "html",
+      "svelte",
+      "preact",
+      "react-native"
     ],
     "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
   }
