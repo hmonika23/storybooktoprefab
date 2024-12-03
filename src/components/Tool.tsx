@@ -13,7 +13,7 @@ export const Tool = memo(function MyAddonSelector({ api }: ToolProps) {
     const currentStory = api.getCurrentStoryData();
 
     console.log("Current story data:", currentStory);
-    console.log("Running version 1.0.0");
+    console.log("Running version 1.0.2");
     if (!currentStory || !currentStory.importPath) {
       console.error("No story is currently rendered or importPath is missing.");
       return;
@@ -31,7 +31,7 @@ export const Tool = memo(function MyAddonSelector({ api }: ToolProps) {
     }
 
     // Construct the zip URL based on the extracted component name
-    const zipUrl = `/prefabs/${componentName}.zip`;
+    const zipUrl = `/${componentName}.zip`;
 
     try {
       const response = await fetch(zipUrl);
