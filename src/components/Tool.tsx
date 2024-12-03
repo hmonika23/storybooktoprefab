@@ -13,6 +13,7 @@ export const Tool = memo(function MyAddonSelector({ api }: ToolProps) {
     const currentStory = api.getCurrentStoryData();
 
     console.log("Current story data:", currentStory);
+    console.log("Running version 1.0.0");
     if (!currentStory || !currentStory.importPath) {
       console.error("No story is currently rendered or importPath is missing.");
       return;
@@ -21,8 +22,8 @@ export const Tool = memo(function MyAddonSelector({ api }: ToolProps) {
     // Extract component name from importPath
     const importPath = currentStory.importPath; // e.g., "./src/stories/Button.stories.ts"
     const componentNameMatch = importPath.match(/\/([^/]+)\.stories\.\w+$/); // Regex to extract component name
-    const componentName = componentNameMatch ? componentNameMatch[1] : null;
-
+    let componentName = componentNameMatch ? componentNameMatch[1] : null;
+    componentName = componentName.toLowerCase();
     if (!componentName) {
       console.error("Failed to extract component name from importPath:", importPath);
       alert("Could not determine the component name.");
