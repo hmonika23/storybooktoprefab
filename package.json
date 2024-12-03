@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-storybooktoprefab",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "It will create the prefab zip to download and use in wavemaker",
   "keywords": [
     "storybook-addons",
